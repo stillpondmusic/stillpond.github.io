@@ -1,97 +1,171 @@
 <!DOCTYPE html>
-padding: 14px 16px;
-border-radius: 8px;
-border: 1px solid #2a2f3f;
-background: #151822;
-color: var(--text);
-font-size: 1rem;
-}
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Still Pond</title>
+  <meta name="description" content="Still Pond — indie pop / indie rock / alternative. New music and updates." />
 
-input::placeholder {
-color: #7c8094;
-}
+  <!-- Simple, clean styling -->
+  <style>
+    :root {
+      --bg: #0f1115;
+      --text: #f5f5f7;
+      --muted: #b5b5c0;
+      --accent: #8fd3f4; /* soft dreamy blue */
+    }
 
-button {
-padding: 14px 20px;
-border-radius: 8px;
-border: none;
-background: linear-gradient(135deg, var(--accent), #c2ffd8);
-color: #0f1115;
-font-weight: 600;
-font-size: 1rem;
-cursor: pointer;
-}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-button:hover {
-opacity: 0.9;
-}
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 50% -10%, #1a1f2b, var(--bg));
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-footer {
-margin-top: 80px;
-color: #6f738a;
-font-size: 0.9rem;
-text-align: center;
-}
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 96px 24px;
+    }
 
-a {
-color: var(--accent);
-text-decoration: none;
-}
+    h1 {
+      font-size: clamp(2.2rem, 4vw, 3rem);
+      letter-spacing: 0.02em;
+      margin-bottom: 12px;
+    }
 
-a:hover {
-text-decoration: underline;
-}
-</style>
+    .tagline {
+      color: var(--muted);
+      margin-bottom: 48px;
+      font-size: 1.1rem;
+    }
+
+    section {
+      margin-bottom: 64px;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    /* Email form */
+    form {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    input[type="email"] {
+      flex: 1;
+      min-width: 220px;
+      padding: 14px 16px;
+      border-radius: 8px;
+      border: 1px solid #2a2f3f;
+      background: #151822;
+      color: var(--text);
+      font-size: 1rem;
+    }
+
+    input::placeholder {
+      color: #7c8094;
+    }
+
+    button {
+      padding: 14px 20px;
+      border-radius: 8px;
+      border: none;
+      background: linear-gradient(135deg, var(--accent), #c2ffd8);
+      color: #0f1115;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    footer {
+      margin-top: 80px;
+      color: #6f738a;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-<main class="container">
-<!-- Hero -->
-<section>
-<h1>Still Pond</h1>
-<div class="tagline">Indie folk / indie rock with endless‑summer & celestial undertones.</div>
-</section>
+  <main class="container">
+    <!-- Hero -->
+    <section>
+      <h1>Still Pond</h1>
+      <div class="tagline">Indie pop / indie rock with endless‑summer & celestial undertones.</div>
+    </section>
 
-<!-- About -->
-<section>
-<h2>About</h2>
-<p>
-Still Pond is an indie music project blending hazy guitars, melodic hooks, and reflective lyrics.
-The songs live somewhere between nostalgia and forward motion — chasing moments that feel
-suspended in time.
-</p>
-<p>
-New music is released independently, shaped by late‑night demos, long drives, and the feeling
-that something good might be just over the horizon.
-</p>
-</section>
+    <!-- About -->
+    <section>
+      <h2>About</h2>
+      <p>
+        Still Pond is an indie music project blending hazy guitars, melodic hooks, and reflective lyrics.
+        The songs live somewhere between nostalgia and forward motion — chasing moments that feel
+        suspended in time.
+      </p>
+      <p>
+        New music is released independently, shaped by late‑night demos, long drives, and the feeling
+        that something good might be just over the horizon.
+      </p>
+    </section>
 
-<!-- Email signup -->
-<section>
-<h2>Stay in the loop</h2>
-<p>Get occasional emails about new music, shows, and releases. No spam — ever.</p>
+    <!-- Email signup -->
+    <section>
+      <h2>Stay in the loop</h2>
+      <p>Get occasional emails about new music, shows, and releases. No spam — ever.</p>
 
-<!--
-OPTION A (simplest): mailto form (no backend)
-Replace YOUREMAIL@example.com with your email
--->
-<form action="mailto:YOUREMAIL@example.com" method="post" enctype="text/plain">
-<input type="email" name="email" placeholder="Your email address" required />
-<button type="submit">Sign up</button>
-</form>
+      <!-- 
+        OPTION A (simplest): mailto form (no backend)
+        Replace YOUREMAIL@example.com with your email
+      -->
+      <!-- Formspree email signup -->
+      <!-- Replace FORM_ID with your actual Formspree form ID -->
+      <form action="https://formspree.io/f/FORM_ID" method="POST">
+        <input type="email" name="email" placeholder="Your email address" required />
+        <button type="submit">Sign up</button>
+      </form>
 
-<!--
-OPTION B (recommended later): use Formspree, ConvertKit, or Mailchimp
-and replace the form action URL.
--->
-</section>
+      <!--
+        OPTION B (recommended later): use Formspree, ConvertKit, or Mailchimp
+        and replace the form action URL.
+      -->
+    </section>
 
-<footer>
-© <span id="year"></span> Still Pond
-</footer>
-</main>
+    <footer>
+      © <span id="year"></span> Still Pond
+    </footer>
+  </main>
 
-<script>
-document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
