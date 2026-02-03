@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+padding: 14px 16px;
+border-radius: 8px;
+border: 1px solid #2a2f3f;
+background: #151822;
+color: var(--text);
+font-size: 1rem;
+}
+
+input::placeholder {
+color: #7c8094;
+}
+
+button {
+padding: 14px 20px;
+border-radius: 8px;
+border: none;
+background: linear-gradient(135deg, var(--accent), #c2ffd8);
+color: #0f1115;
+font-weight: 600;
+font-size: 1rem;
+cursor: pointer;
+}
+
+button:hover {
+opacity: 0.9;
+}
+
+footer {
+margin-top: 80px;
+color: #6f738a;
+font-size: 0.9rem;
+text-align: center;
+}
+
+a {
+color: var(--accent);
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<main class="container">
+<!-- Hero -->
+<section>
+<h1>Still Pond</h1>
+<div class="tagline">Indie folk / indie rock with endless‑summer & celestial undertones.</div>
+</section>
+
+<!-- About -->
+<section>
+<h2>About</h2>
+<p>
+Still Pond is an indie music project blending hazy guitars, melodic hooks, and reflective lyrics.
+The songs live somewhere between nostalgia and forward motion — chasing moments that feel
+suspended in time.
+</p>
+<p>
+New music is released independently, shaped by late‑night demos, long drives, and the feeling
+that something good might be just over the horizon.
+</p>
+</section>
+
+<!-- Email signup -->
+<section>
+<h2>Stay in the loop</h2>
+<p>Get occasional emails about new music, shows, and releases. No spam — ever.</p>
+
+<!--
+OPTION A (simplest): mailto form (no backend)
+Replace YOUREMAIL@example.com with your email
+-->
+<form action="mailto:YOUREMAIL@example.com" method="post" enctype="text/plain">
+<input type="email" name="email" placeholder="Your email address" required />
+<button type="submit">Sign up</button>
+</form>
+
+<!--
+OPTION B (recommended later): use Formspree, ConvertKit, or Mailchimp
+and replace the form action URL.
+-->
+</section>
+
+<footer>
+© <span id="year"></span> Still Pond
+</footer>
+</main>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
